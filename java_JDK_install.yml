@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name : i want ot install open jdk 8 on ubunstu server
+      apt:
+         name: openjdl-8-jre
+         state: present
+
