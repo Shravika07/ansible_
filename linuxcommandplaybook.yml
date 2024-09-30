@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - name: i want to run linux commad
-      command: myresult
+      command: hostname -f
       register: myresult
 
     - name: i want to display linux command output value
@@ -20,5 +20,6 @@
       apt: 
          name: tree
          state: present
-      when: myresult.stderr == ""      
+      when: myresult.stderr == ""
+
 
